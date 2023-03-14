@@ -7,7 +7,7 @@
         <form action="../app/controller/form/tratamento.php" method="POST">
             <button type="submit" name="view">Visuzalizar dados</button>
             <br><br>
-            <input type="text" name="data" placeholder="data">
+            <input type="text" name="data" placeholder="d/MM/yyyy">
             <br><br> 
 <textarea rows='12' cols='50' name='aviso'>
 <h2>Titulo</h2>

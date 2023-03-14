@@ -7,6 +7,8 @@
 
     $sql = $conexao->query("SELECT * FROM day WHERE id=$id");
     $row = $sql->fetch_assoc();
+
+    include_once("../../controller/form/backtoselect.php");
 ?>
 
 <form action="../../controller/form/tratamento.php" method="POST">
