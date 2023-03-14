@@ -9,7 +9,13 @@
             <br><br>
             <input type="text" name="data" placeholder="data">
             <br><br>
-            <textarea name="aviso" placeholder="avisos"></textarea>
+            <textarea name="aviso" placeholder="avisos">
+                <h2>Titulo</h2>
+                <p>aviso sobre o titulo</p>
+                <hr>
+                <h2>Titulo2</h2>
+                <p>aviso sobre o titulo2</p>
+            </textarea>
             <br><br>
             <button type="submit" name="dados">enviar dados</button>
         </form>

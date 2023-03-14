@@ -8,7 +8,6 @@
         <tr>
             <td><b>ID</b></td>            
             <td><b>Dia</b></td>
-            <td><b>Aviso</b></td>
             <td><b>Opções</b></td>
         </tr>
     </thead>    
@@ -25,9 +24,6 @@
                         </td>
                         <td>
                             <p><?= $row['data'] ?></p>
-                        </td>
-                        <td>
-                            <p><?= $row['aviso'] ?></p>
                         </td>
                         <td>
                             <a href="delete.php?id=<?= $row['id'] ?>">
