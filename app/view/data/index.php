@@ -3,6 +3,22 @@
     $conexao = new mysqli("localhost", "root", "", "jornal_senai");
     $result = $conexao->query("SELECT * FROM day");
 ?>
+
+<form action="#" method="post">
+    <button name="home">
+
+    Back to home
+
+    </button>
+</form>
+
+<?php
+    extract($_POST);
+    if(isset($home))
+    {
+        header("Location: ../../../public/index.php");
+    }
+?>
 <table style="border:2px solid black;">
     <thead>
         <tr>
@@ -42,6 +58,4 @@
             }
         ?>       
     </tbody>
-
-    
 </table>
