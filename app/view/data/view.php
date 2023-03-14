@@ -16,6 +16,7 @@
         <title><?= $exibicao['data'] ?></title>
     </head>
     <body>
+        <h1>Dia: <?= $exibicao['data'] ?></h1>
         <?= $exibicao['aviso'] ?>
     </body>
 </html>

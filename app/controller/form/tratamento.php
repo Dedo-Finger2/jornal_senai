@@ -10,9 +10,10 @@ use App\Model\NovoDia;
 
     if(isset($dados))
     {
-        echo "inserção de dados destivada por hora.";
-        //$dia = new DataController();
-        //$dia->setDia($data, $aviso);
+        //echo "inserção de dados destivada por hora.";
+        $dia = new DataController();
+        $dia->setDia($data, $aviso);
+        header("Location: ../../../public/index.php");
     } elseif(isset($view)) {
         header("Location: ../../view/data/index.php");
     }
