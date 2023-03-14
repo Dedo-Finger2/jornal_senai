@@ -3,7 +3,7 @@
     {
     use App\Model\NovoDia;
     require_once '../../model/Model.php';
-        class Controller extends NovoDia
+        class DataController extends NovoDia
         {
             
             public function setDia($data, $aviso)
