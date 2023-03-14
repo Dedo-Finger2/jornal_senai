@@ -7,6 +7,11 @@
             protected $aviso;
             protected $conexao;
 
+            public function __construct()
+            {
+                $this->conexao = new \mysqli("localhost", "root", "", "jornal_senai");
+            }
+
             public function setData($data)
             {
                 $this->data = $data;
@@ -29,11 +34,12 @@
 
             public function save()
             {
-                $this->conexao = new \mysqli("localhost", "root", "", "jornal_senai");
+                //$this->conexao = new \mysqli("localhost", "root", "", "jornal_senai");
 
                 $sql = $this->conexao->prepare("INSERT INTO day(data, aviso) VALUES (?,?)");
                 $sql->bind_param("ss", $this->data, $this->aviso);
                 $sql->execute();
+                $sql->close();
                 
             }
 
@@ -42,14 +48,17 @@
 
             }
 
-            public function update()
+            public function update($novo_data, $novo_aviso, $id)
             {
+                //$this->conexao = new \mysqli("localhost", "root", "", "jornal_senai");
 
-            }
-
-            public function list()
-            {
-
+                $this->data = $novo_data;
+                $this->aviso = $novo_aviso;
+            
+                $sql = $this->conexao->prepare("UPDATE day SET data=?, aviso=? WHERE id=?");
+                $sql->bind_param("ssi", $this->data, $this->aviso, $id);
+                $sql->execute();
+                $sql->close();
             }
 
         }
