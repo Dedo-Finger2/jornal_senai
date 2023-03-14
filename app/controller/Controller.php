@@ -23,14 +23,14 @@
 
             }
 
-            public function updateDia()
+            public function updateDia($data, $aviso, $id)
             {
-
+                if(isset($data) && isset($aviso))
+                {
+                    $this->update($data, $aviso, $id);
+                }
+                               
             }
 
-            public function listDias()
-            {
-
-            }
         }
     }

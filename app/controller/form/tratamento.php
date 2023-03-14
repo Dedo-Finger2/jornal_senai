@@ -7,14 +7,22 @@ use App\Model\NovoDia;
     extract($_POST);
 
 
-
     if(isset($dados))
     {
         //echo "inserção de dados destivada por hora.";
         $dia = new DataController();
         $dia->setDia($data, $aviso);
         header("Location: ../../../public/index.php");
-    } elseif(isset($view)) {
+    
+    } elseif(isset($view)) 
+    {
+        header("Location: ../../view/data/index.php");
+    
+    } elseif(isset($update)) 
+    {
+        $dia = new DataController();
+        $dia->updateDia($novo_data, $novo_aviso, $id);
+
         header("Location: ../../view/data/index.php");
     }
 
