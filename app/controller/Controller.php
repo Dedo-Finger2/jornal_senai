@@ -18,9 +18,14 @@
                 }
             }
 
-            public function deleteDia()
+            public function deleteDia($id)
             {
-
+                if(isset($id))
+                {
+                    $this->delete($id);
+                } else {
+                    echo "ID INVÁLIDO";
+                }
             }
 
             public function updateDia($data, $aviso, $id)

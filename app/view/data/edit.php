@@ -10,9 +10,9 @@
 ?>
 
 <form action="../../controller/form/tratamento.php" method="POST">
-    <h3>Editantdo local</h3>
-    Nova data: <input type="text" name="novo_data" value="<?= $row['data'] ?>"><br><br>
-    Novo aviso: <textarea name="novo_aviso"><?= $row['aviso'] ?></textarea>
+    <h2>Editantdo dia <?= $row['data'] ?></h2>
+    Nova data: <br><input type="text" name="novo_data" value="<?= $row['data'] ?>"><br><br>
+    Novo aviso: <br><textarea rows='12' cols='50' name='novo_aviso'><?= $row['aviso'] ?></textarea>
     <input type="hidden" name="id" value="<?= $id ?>">
     <br><br>
     <button type="submit" name="update">Update</button>

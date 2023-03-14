@@ -24,6 +24,12 @@ use App\Model\NovoDia;
         $dia->updateDia($novo_data, $novo_aviso, $id);
 
         header("Location: ../../view/data/index.php");
+    } elseif(isset($deleted))
+    {
+        $dia = new DataController();
+        $dia->deleteDia($delete_id);
+
+        header("Location: ../../view/data/index.php");
     }
 
 
