@@ -43,9 +43,12 @@
                 
             }
 
-            public function delete()
+            public function delete($id)
             {
-
+                $sql = $this->conexao->prepare("DELETE FROM day WHERE id=?");
+                $sql->bind_param("s", $id);
+                $sql->execute();
+                $sql->close();
             }
 
             public function update($novo_data, $novo_aviso, $id)
