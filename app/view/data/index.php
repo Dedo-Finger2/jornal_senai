@@ -16,7 +16,7 @@
     extract($_POST);
     if(isset($home))
     {
-        header("Location: ../../../public/index.php");
+        header("Location: ../../../index.php");
     }
 ?>
 <table style="border:2px solid black;">
