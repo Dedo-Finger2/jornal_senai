@@ -12,7 +12,7 @@ use App\Model\NovoDia;
         //echo "inserção de dados destivada por hora.";
         $dia = new DataController();
         $dia->setDia($data, $aviso);
-        header("Location: ../../../index.php");
+        header("Location: ../../../index.html");
     
     } elseif(isset($view)) 
     {
