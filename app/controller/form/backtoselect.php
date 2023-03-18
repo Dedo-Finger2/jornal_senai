@@ -10,6 +10,6 @@
     extract($_POST);
     if(isset($list))
     {
-        header("Location: index.html");
+        header("Location: index.php");
     }
 ?>
